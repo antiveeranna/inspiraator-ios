@@ -14,6 +14,7 @@
 		E91273E527B669B6003CD7A2 /* InspirationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91273E427B669B6003CD7A2 /* InspirationData.swift */; };
 		E91273E727B669D1003CD7A2 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91273E627B669D1003CD7A2 /* SectionView.swift */; };
 		E91273ED27B66CAE003CD7A2 /* inspiratsioon.json in Resources */ = {isa = PBXBuildFile; fileRef = E91273EC27B66CAE003CD7A2 /* inspiratsioon.json */; };
+		E9514E1627BFE94D009B94D6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9514E1527BFE94D009B94D6 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		E91273E427B669B6003CD7A2 /* InspirationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationData.swift; sourceTree = "<group>"; };
 		E91273E627B669D1003CD7A2 /* SectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		E91273EC27B66CAE003CD7A2 /* inspiratsioon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = inspiratsioon.json; sourceTree = SOURCE_ROOT; };
+		E92D94A927C2AA5C0010FED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E9514E1527BFE94D009B94D6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,7 @@
 		E91273D527B664E3003CD7A2 /* inspiraator-ios */ = {
 			isa = PBXGroup;
 			children = (
+				E92D94A927C2AA5C0010FED4 /* Info.plist */,
 				E91273EC27B66CAE003CD7A2 /* inspiratsioon.json */,
 				E91273E627B669D1003CD7A2 /* SectionView.swift */,
 				E91273E427B669B6003CD7A2 /* InspirationData.swift */,
@@ -64,6 +68,7 @@
 				E91273D827B664E3003CD7A2 /* ContentView.swift */,
 				E91273DA27B664E4003CD7A2 /* Assets.xcassets */,
 				E91273DC27B664E4003CD7A2 /* Preview Content */,
+				E9514E1527BFE94D009B94D6 /* Launch Screen.storyboard */,
 			);
 			path = "inspiraator-ios";
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			files = (
 				E91273ED27B66CAE003CD7A2 /* inspiratsioon.json in Resources */,
 				E91273DE27B664E4003CD7A2 /* Preview Assets.xcassets in Resources */,
+				E9514E1627BFE94D009B94D6 /* Launch Screen.storyboard in Resources */,
 				E91273DB27B664E4003CD7A2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,14 +286,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"inspiraator-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = 2B9WH4Y787;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "inspiraator-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -296,7 +304,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.masendav.inspiraator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -312,14 +320,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"inspiraator-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = 2B9WH4Y787;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "inspiraator-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -328,7 +338,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.masendav.inspiraator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

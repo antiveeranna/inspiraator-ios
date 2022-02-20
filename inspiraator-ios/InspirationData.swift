@@ -11,11 +11,13 @@ struct Insp: Codable, Hashable {
 }
 
 class ReadData: ObservableObject  {
-    @Published var location = "";
-    @Published var relation = "";
-    @Published var emotion = "";
-    @Published var randompair = "";
-    @Published var thing = "";
+    @Published var location = ""
+    @Published var relation = ""
+    @Published var emotion = ""
+    @Published var randompair = ""
+    @Published var thing = ""
+    
+    @Published var locations = 0
     
     var locationIndex = 0;
     var relationIndex = 0;
@@ -24,7 +26,7 @@ class ReadData: ObservableObject  {
     var emotionIndex = 0;
     var thingIndex = 0;
     
-    var inspiration = Insp();
+    @Published var inspiration = Insp();
 
     init(){
         loadData()
@@ -45,8 +47,9 @@ class ReadData: ObservableObject  {
     }
     
     func loadData()  {
+        
         print("Reading JSON");
-        guard let url = Bundle.main.url(forResource: "inspiratsioon.json", withExtension: nil)
+                guard let url = Bundle.main.url(forResource: "inspiratsioon.json", withExtension: nil)
         else {
             print("JSON file not found")
             return
