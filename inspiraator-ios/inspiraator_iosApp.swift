@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Intents
 
 extension Bundle {
     var releaseVersionNumber: String? {
@@ -22,9 +23,17 @@ extension Bundle {
 
 @main
 struct inspiraator_iosApp: App {
+    
+    @Environment(\.scenePhase) private var scenePhase
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+        }
+        .onChange(of: scenePhase) {phase in
+            INPreferences.requestSiriAuthorization({status in
+                
+            })
         }
     }
 }

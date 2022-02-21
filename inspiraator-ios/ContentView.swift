@@ -1,4 +1,5 @@
 import SwiftUI
+import Intents
 
 struct ListFooter: View {
     var body: some View {
@@ -62,6 +63,17 @@ struct ContentView: View {
                     }
                     
                 }
+                ToolbarItem(placement: .navigation) {
+                    VStack {
+                        Button() {
+                            makeDonation(symbol: "IBM")
+                        } label: {
+                            Text("Donate")
+                        }
+                        Spacer()
+                    }
+                    
+                }
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         self.infoVisible.toggle()
@@ -82,6 +94,24 @@ struct ContentView: View {
             }
         }.navigationViewStyle(.stack)
     }
+    
+    func makeDonation(symbol: String) {
+            let intent = InspirationIntent()
+            intent.category = .emotion
+
+            let interaction = INInteraction(intent: intent, response: nil)
+       
+            interaction.donate { (error) in
+                if error != nil {
+                    if let error = error as NSError? {
+                        print(
+                         "Donation failed: %@" + error.localizedDescription)
+                    }
+                } else {
+                    print("Successfully donated interaction")
+                }
+            }
+        }
     
     
 }
