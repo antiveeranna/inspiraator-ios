@@ -46,18 +46,18 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack (alignment: .leading, spacing: 14) {
-                SectionView(title: "Asukoht", content: inspiration.location)
-                SectionView(title: "Emotsioon", content: inspiration.emotion)
-                SectionView(title: "Enam-vähem loogiline suhe", content: inspiration.relation)
-                SectionView(title: "Ese", content: inspiration.thing)
-                SectionView(title: "2 täiesti juhuslikku tegelast ja nende omadust", content: inspiration.randompair)
+                SectionView(title: "Location", content: inspiration.location)
+                SectionView(title: "Emotion", content: inspiration.emotion)
+                SectionView(title: "Relation", content: inspiration.relation)
+                SectionView(title: "Object", content: inspiration.thing)
+                SectionView(title: "Random characters with attributes", content: inspiration.randompair)
             }.toolbar {
                 ToolbarItem(placement: .bottomBar) {
                     VStack {
                         Button() {
                             inspiration.newChoice()
                         } label: {
-                            Text("Uus valik").frame(minWidth: 0, maxWidth: .infinity)
+                            Text("New choice").frame(minWidth: 0, maxWidth: .infinity)
                         }.buttonStyle(.borderedProminent).controlSize(.large)
                         Spacer()
                     }
@@ -115,3 +115,10 @@ struct ContentView: View {
     
     
 }
+
+struct ContentView_Previews: PreviewProvider {
+     static var previews: some View {
+         ContentView()
+             .environment(\.locale, .init(identifier: "et"))
+     }
+ }

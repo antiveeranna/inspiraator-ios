@@ -32,6 +32,9 @@
 		E951E58227C42F5F00423BF7 /* InspirationReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951E58027C42F5F00423BF7 /* InspirationReader.swift */; };
 		E951E58327C4305900423BF7 /* InspirationReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951E58027C42F5F00423BF7 /* InspirationReader.swift */; };
 		E951E58427C4306000423BF7 /* inspiratsioon.json in Resources */ = {isa = PBXBuildFile; fileRef = E91273EC27B66CAE003CD7A2 /* inspiratsioon.json */; };
+		E951E58A27C581DB00423BF7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E951E58E27C581DB00423BF7 /* Localizable.strings */; };
+		E951E58B27C581DB00423BF7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E951E58E27C581DB00423BF7 /* Localizable.strings */; };
+		E951E58C27C581DB00423BF7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E951E58E27C581DB00423BF7 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		E92D94D527C2B0130010FED4 /* inspiraator-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "inspiraator-ios.entitlements"; sourceTree = "<group>"; };
 		E9514E1527BFE94D009B94D6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E951E58027C42F5F00423BF7 /* InspirationReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationReader.swift; sourceTree = "<group>"; };
+		E951E58527C57E2200423BF7 /* et-EE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "et-EE"; path = "et-EE.lproj/MainInterface.strings"; sourceTree = "<group>"; };
+		E951E58D27C581DB00423BF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E951E58F27C581DE00423BF7 /* et-EE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "et-EE"; path = "et-EE.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		E91273CA27B664E3003CD7A2 = {
 			isa = PBXGroup;
 			children = (
+				E951E58E27C581DB00423BF7 /* Localizable.strings */,
 				E91273D527B664E3003CD7A2 /* inspiraator-ios */,
 				E92D94B627C2AD0E0010FED4 /* Inspiraator */,
 				E92D94C127C2AD0E0010FED4 /* InspiraatorIntentView */,
@@ -279,6 +286,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"et-EE",
 			);
 			mainGroup = E91273CA27B664E3003CD7A2;
 			productRefGroup = E91273D427B664E3003CD7A2 /* Products */;
@@ -297,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E951E58A27C581DB00423BF7 /* Localizable.strings in Resources */,
 				E91273ED27B66CAE003CD7A2 /* inspiratsioon.json in Resources */,
 				E91273DE27B664E4003CD7A2 /* Preview Assets.xcassets in Resources */,
 				E9514E1627BFE94D009B94D6 /* Launch Screen.storyboard in Resources */,
@@ -309,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E951E57F27C42DA800423BF7 /* inspiratsioon.json in Resources */,
+				E951E58B27C581DB00423BF7 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E951E58427C4306000423BF7 /* inspiratsioon.json in Resources */,
+				E951E58C27C581DB00423BF7 /* Localizable.strings in Resources */,
 				E92D94C627C2AD0E0010FED4 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,8 +390,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				E92D94C527C2AD0E0010FED4 /* Base */,
+				E951E58527C57E2200423BF7 /* et-EE */,
 			);
 			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		E951E58E27C581DB00423BF7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E951E58D27C581DB00423BF7 /* en */,
+				E951E58F27C581DE00423BF7 /* et-EE */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -390,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -451,6 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

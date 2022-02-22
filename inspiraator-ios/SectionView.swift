@@ -8,7 +8,7 @@ struct SectionView: View {
     
     var body: some View {
         VStack (alignment: .leading){
-            Text(title).font(.caption).foregroundColor(.accentColor)
+            Text(LocalizedStringKey(title)).font(.caption).foregroundColor(.accentColor)
             Text(content.prefix(1).capitalized + content.dropFirst()).font(.title2)
         }
         Divider()
