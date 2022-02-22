@@ -11,6 +11,13 @@ import Intents
 
 class IntentHandler: INExtension, InspirationIntentHandling {
     
+    var inspiration:InspirationReader
+    
+    override init() {
+        inspiration = InspirationReader()
+        super.init()
+    }
+    
     // what do I need this resolve category for, eh?
     func resolveCategory(for intent: InspirationIntent, with completion: @escaping (INStringResolutionResult) -> Void) {
         completion(INStringResolutionResult.success(with:"ok-ok"))
@@ -26,12 +33,21 @@ class IntentHandler: INExtension, InspirationIntentHandling {
     func handle(intent: InspirationIntent, completion: @escaping (InspirationIntentResponse) -> Void) {
         print("Handling InspirationIntent")
         
-        let inspiration = InspirationReader()
         inspiration.newChoice()
         
         let userActivity = NSUserActivity(activityType: NSStringFromClass(InspirationIntent.self))
         let response = InspirationIntentResponse(code: .success, userActivity: userActivity)
-        response.result = inspiration.location
+        
+        switch intent.category {
+        case .emotion:
+            response.result = inspiration.emotion
+        case .location:
+            response.result = inspiration.location
+        default:
+            response.result = inspiration.location
+            
+        }
+        
         completion(response)
     }
 
